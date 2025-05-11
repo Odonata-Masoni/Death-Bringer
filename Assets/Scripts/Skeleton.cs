@@ -9,7 +9,7 @@ public class Skeleton : MonoBehaviour
     public float walkSpeed = 3f;
     public float walkStopRate = 0.05f;
     public DetectionZone attackZone;
-    
+    public DetectionZone cliffDetectionZone;
 
     Rigidbody2D rb;
     TouchingDirection touchingDirection;
@@ -90,7 +90,7 @@ public class Skeleton : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(touchingDirection.IsGrounded && touchingDirection.IsOnWall)
+        if(touchingDirection.IsGrounded && touchingDirection.IsOnWall )
         {
             FlipDirection();
         }
@@ -124,6 +124,13 @@ public class Skeleton : MonoBehaviour
     {
         
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+    }
+    public void OnCLiffDetected()
+    {
+        if(touchingDirection.IsGrounded)
+        {
+            FlipDirection();
+        }
     }
     
 }
