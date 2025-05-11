@@ -11802,10 +11802,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHitP.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 687617397}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHitP.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 687617397}
     - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
@@ -11817,11 +11825,27 @@ PrefabInstance:
       value: OnHit
       objectReference: {fileID: 0}
     - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHitP.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHitP.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnHitPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayerController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHitP.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHitP.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7486441165299223664, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
