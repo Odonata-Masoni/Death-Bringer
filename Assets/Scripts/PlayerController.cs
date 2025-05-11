@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
@@ -193,8 +193,16 @@ public class PlayerController : MonoBehaviour
 
     public void OnHit(float damage, Vector2 knockback, bool lockVelocity)
     {
-        
-        rb.velocity = new Vector2(knockback.x,rb.velocity.y + knockback.y);
+        Debug.Log($"Player OnHit called with damage: {damage}, knockback: {knockback}");
+        if (damageable != null)
+        {
+            damageable.Hit(damage, knockback); // Giảm máu và cập nhật trạng thái
+            damageable.LockVelocity = lockVelocity; // Cập nhật LockVelocity
+        }
+        if (rb != null)
+        {
+            rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+        }
     }
 
 }

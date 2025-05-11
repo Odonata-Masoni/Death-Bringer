@@ -86,7 +86,7 @@ PolygonCollider2D:
       - {x: -0.8925076, y: 0.09138204}
       - {x: -1.8269111, y: -0.117205776}
       - {x: -2.8368652, y: -0.156857}
-      - {x: -3.5090733, y: -0.4964686}
+      - {x: -4.5859137, y: -0.5803783}
       - {x: -2.701157, y: -0.8761601}
       - {x: -2.0087368, y: -0.8985688}
       - {x: -1.081007, y: -0.9531614}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
-  knockback: {x: 0, y: 0}
+  knockback: {x: 7, y: 2}
 --- !u!1 &7959189844609566669
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 4731990007324737932}
   - component: {fileID: 5262815376673478044}
   - component: {fileID: 7120138158491433729}
-  - component: {fileID: 7347486847831536679}
   - component: {fileID: 5699867550412378854}
   m_Layer: 8
   m_Name: Skeleton
@@ -334,38 +333,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7347486847831536679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7959189844609566669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76990f17b9c421347a3ffd4be6224f9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  castFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  groundDistance: 0.05
-  wallDistance: 0.5
-  ceilingDistance: 0.05
-  _isGrounded: 0
-  _isOnWall: 0
-  _isOnCeiling: 0
 --- !u!114 &5699867550412378854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,7 +347,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageableHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4731990007324737932}
+        m_TargetAssemblyTypeName: Skeleton, Assembly-CSharp
+        m_MethodName: OnHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _maxHealth: 100
   _health: 100
   _isAlive: 1

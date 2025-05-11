@@ -11800,6 +11800,30 @@ PrefabInstance:
       propertyPath: isInvincibilityTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 687617397}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7486441165299223664, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 15
@@ -12139,7 +12163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5737948331173023698, guid: 3c5267aa7a5f00b42a9089675c51af64, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5737948331173023698, guid: 3c5267aa7a5f00b42a9089675c51af64, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12205,7 +12229,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7347486847831536679, guid: 3c5267aa7a5f00b42a9089675c51af64, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
