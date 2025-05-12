@@ -87,7 +87,7 @@ public class Damageable : MonoBehaviour
             LockVelocity = true;
             damageableHit?.Invoke(damage, knockback);    // Gọi cho Skeleton
             damageableHitP?.Invoke(damage, knockback, LockVelocity);   // Gọi cho PlayerController
-            isInvincible = true;
+            CharacterEvents.characterDamaged.Invoke(gameObject, damage);
             Debug.Log($"Hit with damage: {damage}, Remaining Health: {Health}");
             return true;
         }
