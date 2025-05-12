@@ -383,7 +383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1433a93114a031040af7a3ba2d3abd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2.5
+  walkAcceleration: 30
+  maxSpeed: 3
   walkStopRate: 0.05
   attackZone: {fileID: 785307635037894561}
   cliffDetectionZone: {fileID: 5835845120865598652}
@@ -471,8 +472,8 @@ MonoBehaviour:
   damageableHitP:
     m_PersistentCalls:
       m_Calls: []
-  _maxHealth: 100
-  _health: 100
+  _maxHealth: 200
+  _health: 200
   _isAlive: 1
   isInvincibilityTime: 0.25
 --- !u!1 &8488336737155696700
