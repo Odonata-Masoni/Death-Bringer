@@ -12068,7 +12068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1514664367222905541, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: knockback.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1514664367222905541, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: attackDamage
@@ -12084,11 +12084,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3799370496236648906, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: knockback.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3799370496236648906, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: knockback.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: jumpImpusle
@@ -12097,6 +12097,10 @@ PrefabInstance:
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: airWalkSpeed
       value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
+      propertyPath: airControlMultiplier
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4473389735834963640, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: _isGrounded
@@ -12124,7 +12128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: _maxHealth
-      value: 100
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 6579035553130940589, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: isInvincibilityTime
