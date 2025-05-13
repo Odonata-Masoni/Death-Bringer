@@ -186,6 +186,14 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
     }
+    public void OnRangeAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Debug.Log("Range Attack triggered!");
+            animator.SetTrigger(AnimationStrings.rangeAttackTrigger);
+        }
+    }
 
     public bool GetLockVelocity()
     {
