@@ -12436,7 +12436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: jumpImpusle
-      value: 3030
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: airWalkSpeed
