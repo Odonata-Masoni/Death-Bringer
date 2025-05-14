@@ -199,7 +199,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
-        if (context.started && touchingDirection.IsGrounded && !IsRolling)
+        if (context.started  && !IsRolling)
         {
             Debug.Log("Attack triggered!");
             if (animator != null) animator.SetTrigger(AnimationStrings.attackTrigger);

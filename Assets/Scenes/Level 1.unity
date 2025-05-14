@@ -12436,7 +12436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: jumpImpusle
-      value: 12
+      value: 3030
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: airWalkSpeed
@@ -12444,11 +12444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: fallMultiplier
-      value: 3
+      value: 1.85
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: lowJumpMultiplier
-      value: 3
+      value: 2.16
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: airControlMultiplier
