@@ -1613,6 +1613,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2106743893}
   followTarget: {fileID: 19246950}
+--- !u!114 &1012686378 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1620729546197161016, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+  m_PrefabInstance: {fileID: 5457242020731498442}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3582d12a3427a488e0b8f9ef34f714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1157111715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2045,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1959685070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2540588673097124225, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+  m_PrefabInstance: {fileID: 5457242020731498442}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2056016970
 GameObject:
   m_ObjectHideFlags: 0
@@ -12005,13 +12021,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 522853918250241494, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 522853918250241494, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844221479199073405, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: _hasTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844221479199073405, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: biteDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 844221479199073405, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 844221479199073405, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: attackCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 844221479199073405, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: biteDetectionZone
+      value: 
+      objectReference: {fileID: 1012686378}
+    - target: {fileID: 1600893019823272754, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2540588673097124225, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
       propertyPath: m_Name
       value: FlyingEye
       objectReference: {fileID: 0}
     - target: {fileID: 3415967241955109186, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.64
+      value: 9.67
       objectReference: {fileID: 0}
     - target: {fileID: 3415967241955109186, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12048,6 +12096,30 @@ PrefabInstance:
     - target: {fileID: 3415967241955109186, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749932234229810184, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768947658956100304, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768947658956100304, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665791355246902323, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665791355246902323, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1959685070}
+    - target: {fileID: 6665791355246902323, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
