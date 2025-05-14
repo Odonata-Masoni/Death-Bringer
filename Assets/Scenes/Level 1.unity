@@ -12240,6 +12240,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1917915962976436536, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2540588673097124225, guid: 45c3e4abf5f726c42a9476ac3860bd99, type: 3}
       propertyPath: m_Name
       value: FlyingEye
