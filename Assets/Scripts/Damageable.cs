@@ -7,6 +7,7 @@ public class Damageable : MonoBehaviour
 {
     public UnityEvent<float, Vector2> damageableHit;    // Cho Skeleton.OnHit
     public UnityEvent<float, Vector2, bool> damageableHitP;   // Cho PlayerController.OnHitP
+    public UnityEvent damageableDeath;
 
     Animator animator;
     [SerializeField] private float _maxHealth = 100f;
@@ -43,6 +44,10 @@ public class Damageable : MonoBehaviour
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
             Debug.Log("IsAlive set to: " + value);
+            if(value==false)
+            {
+                damageableDeath.Invoke();
+            }
         }
     }
     public bool LockVelocity

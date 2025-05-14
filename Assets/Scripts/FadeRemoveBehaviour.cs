@@ -5,7 +5,10 @@ using UnityEngine;
 public class FadeRemoveBehaviour : StateMachineBehaviour
 {
     public float fadeTime = 0.5f;
+    public float fadeDelay = 0.0f;
     private float timeElased = 0f;
+    private float fadeDelayElapsed = 0f;
+
     SpriteRenderer spriteRenderer;
     GameObject objToRemove;
     Color startColor;
@@ -22,13 +25,21 @@ public class FadeRemoveBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timeElased += Time.deltaTime;
-        float newAlpha = startColor.a *(1 - (timeElased / fadeTime));
-        spriteRenderer.color = new Color(startColor.r,startColor.g,startColor.b, newAlpha);
-        if (timeElased > fadeTime)
+        if(fadeDelay > fadeDelayElapsed)
         {
-            Destroy(objToRemove);
+            fadeDelayElapsed += Time.deltaTime;
         }
+        else
+        {
+            timeElased += Time.deltaTime;
+            float newAlpha = startColor.a * (1 - (timeElased / fadeTime));
+            spriteRenderer.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
+            if (timeElased > fadeTime)
+            {
+                Destroy(objToRemove);
+            }
+        }
+          
     }
 }
 
