@@ -5,46 +5,65 @@ using UnityEngine;
 public class playOneShotBehaviour : StateMachineBehaviour
 {
     public AudioClip sound;
-    public float volume = 1f;
-    public bool playOnEnter = true, playOnExit = false, playAfterDelay = false;
+    [Range(0f, 1f)] public float volume = 1f;
+
+    public bool playOnEnter = true;
+    public bool playOnExit = false;
+    public bool playAfterDelay = false;
 
     public float playDelay = 0.25f;
-    private float timeSinceEntered = 0;
+
+    private float timeSinceEntered = 0f;
     private bool hasDelayedSoundPlay = false;
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(playOnEnter)
+        if (playOnEnter)
         {
-            AudioSource.PlayClipAtPoint(sound, animator.gameObject.transform.position, volume);
+            PlaySound(animator.transform.position);
         }
         timeSinceEntered = 0f;
         hasDelayedSoundPlay = false;
     }
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(playAfterDelay && !hasDelayedSoundPlay)
+        if (playAfterDelay && !hasDelayedSoundPlay)
         {
             timeSinceEntered += Time.deltaTime;
-            if(timeSinceEntered>playDelay)
+            if (timeSinceEntered >= playDelay)
             {
-                AudioSource.PlayClipAtPoint(sound, animator.gameObject.transform.position, volume);
+                PlaySound(animator.transform.position);
                 hasDelayedSoundPlay = true;
             }
-
         }
     }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (playOnExit)
         {
-            AudioSource.PlayClipAtPoint(sound, animator.gameObject.transform.position, volume);
+            PlaySound(animator.transform.position);
         }
     }
 
-    
+    private void PlaySound(Vector3 position)
+    {
+        if (sound == null) return;
+
+        GameObject tempGO = new GameObject("TempAudio");
+        tempGO.transform.position = position;
+
+        AudioSource audioSource = tempGO.AddComponent<AudioSource>();
+        audioSource.clip = sound;
+        audioSource.volume = volume;
+        audioSource.spatialBlend = 0f; // 0 = 2D, 1 = 3D
+        audioSource.rolloffMode = AudioRolloffMode.Linear;
+        audioSource.dopplerLevel = 0f;
+        audioSource.playOnAwake = false;
+
+        audioSource.Play();
+
+        Object.Destroy(tempGO, sound.length + 0.1f);
+    }
 }
