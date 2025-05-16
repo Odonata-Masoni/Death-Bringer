@@ -12664,7 +12664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3623326887753511928, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: m_GravityScale
-      value: 2
+      value: 3.38
       objectReference: {fileID: 0}
     - target: {fileID: 3799370496236648906, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: knockback.x
@@ -12676,7 +12676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: jumpImpusle
-      value: 13
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 3889078685917364228, guid: 1909270ba7e72d6449e1b41576df4996, type: 3}
       propertyPath: airWalkSpeed
